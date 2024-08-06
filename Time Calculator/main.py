@@ -29,7 +29,7 @@ def add_time(start, duration, day=''):
     days_passed = new_time_hours // 24
 
     #if the starting period is PM and the sum of hours is greater than 12, increment days passed by one
-    if start_period == periods[1] and new_time_hours > 12:
+    if start_period == periods[1] and 24 > new_time_hours >= 12:
         days_passed += 1
 
     #calculate passed periods
@@ -65,3 +65,5 @@ print(add_time('3:30 PM', '2:12'))
 print(add_time('8:16 PM', '466:02'))
 print(add_time('11:30 PM', '2:12'))
 print(add_time('2:59 AM', '24:00'))
+print(add_time('9:20 PM', '3:00', 'Tuesday'))
+print(add_time('9:20 AM', '3:00', 'Tuesday'))
